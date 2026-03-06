@@ -1,6 +1,6 @@
 "use client";
 
-import { ensureGsap } from "./gsapClient";
+import { gsap } from "./gsapClient";
 
 export function buildHeroTimeline(args: {
   root: HTMLElement;
@@ -9,8 +9,6 @@ export function buildHeroTimeline(args: {
   textEl: HTMLElement;
   iconEls: HTMLElement[];
 }) {
-  const gsap = ensureGsap();
-
   const tl = gsap.timeline();
   tl.fromTo(
     args.textEl,

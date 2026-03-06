@@ -1,10 +1,8 @@
 "use client";
 
-import { ensureGsap, ScrollTrigger } from "./gsapClient";
+import { gsap, ScrollTrigger } from "./gsapClient";
 
 export function createRevealBatch(selector: string) {
-  const gsap = ensureGsap();
-
   ScrollTrigger.batch(selector, {
     start: "top 85%",
     once: true,

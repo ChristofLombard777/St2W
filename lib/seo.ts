@@ -6,11 +6,11 @@ export function buildMetadata(opts: {
   description: string;
   path?: string;
 }): Metadata {
-  const url = opts.path ? `${BRAND.website}${opts.path}` : BRAND.website;
+  const url = opts.path ? `${BRAND.websiteFullUrl}${opts.path}` : BRAND.websiteFullUrl;
   return {
     title: `${opts.title} | ${BRAND.name}`,
     description: opts.description,
-    metadataBase: new URL(BRAND.website),
+    metadataBase: new URL(BRAND.websiteFullUrl),
     openGraph: {
       title: `${opts.title} | ${BRAND.name}`,
       description: opts.description,
