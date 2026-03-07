@@ -73,8 +73,8 @@ export default function HeroCinematic() {
         />
       </div>
 
-      {/* Navy blue overlay - 50% opacity */}
-      <div className="absolute inset-0 z-[1] bg-brand-navy-950/50" />
+      {/* Navy gradient overlay - image more visible left, darker right for globe */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/30 via-brand-navy-950/60 to-brand-navy-950/90" />
 
       {/* Dot-grid overlay */}
       <div
