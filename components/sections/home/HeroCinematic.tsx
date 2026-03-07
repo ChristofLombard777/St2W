@@ -73,8 +73,8 @@ export default function HeroCinematic() {
         />
       </div>
 
-      {/* Navy gradient overlay - image more visible left, darker right for globe */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/30 via-brand-navy-950/60 to-brand-navy-950/90" />
+      {/* Navy gradient overlay - image visible left, dark right for globe */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/10 via-brand-navy-950/50 to-brand-navy-950/95" />
 
       {/* Dot-grid overlay */}
       <div
@@ -90,7 +90,7 @@ export default function HeroCinematic() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 65% 55% at 68% 50%, rgba(200,168,75,0.12) 0%, transparent 65%), radial-gradient(ellipse 45% 45% at 18% 42%, rgba(2,34,72,0.7) 0%, transparent 80%), radial-gradient(ellipse 30% 30% at 50% 80%, rgba(212,169,60,0.06) 0%, transparent 60%)",
+            "radial-gradient(ellipse 65% 55% at 68% 50%, rgba(200,168,75,0.10) 0%, transparent 65%), radial-gradient(ellipse 30% 30% at 50% 80%, rgba(212,169,60,0.05) 0%, transparent 60%)",
         }}
       />
 
@@ -99,8 +99,6 @@ export default function HeroCinematic() {
         <Globe />
       </div>
 
-      {/* Fade edge left of globe */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-[70%] sm:w-[60%] lg:w-[55%] bg-gradient-to-r from-brand-navy-950 via-brand-navy-950/90 to-transparent" />
 
       {/* Content */}
       <Container className="relative z-10 w-full py-24 sm:py-28 lg:py-0">
