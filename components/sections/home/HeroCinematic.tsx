@@ -60,7 +60,21 @@ export default function HeroCinematic() {
   const titleWords = st2wContent.hero.title.split(" ");
 
   return (
-    <section className="relative min-h-[100svh] w-full bg-brand-navy-950 flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[100svh] w-full flex flex-col justify-center overflow-hidden">
+
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Navy blue overlay - 50% opacity */}
+      <div className="absolute inset-0 z-[1] bg-brand-navy-950/50" />
 
       {/* Dot-grid overlay */}
       <div
