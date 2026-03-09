@@ -73,8 +73,9 @@ export default function HeroCinematic() {
         />
       </div>
 
-      {/* Navy gradient overlay - image visible left, dark right for globe */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/10 via-brand-navy-950/50 to-brand-navy-950/95" />
+      {/* Balanced navy overlays: keep image visible on left, darker on right for globe */}
+      <div className="absolute inset-0 z-[1] bg-brand-navy-950/22" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-transparent via-brand-navy-950/25 to-brand-navy-950/80" />
 
       {/* Dot-grid overlay */}
       <div
