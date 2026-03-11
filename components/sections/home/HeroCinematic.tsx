@@ -68,13 +68,13 @@ export default function HeroCinematic() {
           src="/hero-bg.jpg"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover brightness-[0.84] saturate-[0.92]"
           priority
         />
       </div>
 
-      <div className="absolute inset-0 z-[1] bg-brand-navy-950/32" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-transparent via-transparent to-brand-navy-950/38" />
+      <div className="absolute inset-0 z-[1] bg-brand-navy-950/24" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/52 via-brand-navy-950/18 to-brand-navy-950/42" />
 
       {/* Dot-grid overlay */}
       <div
@@ -105,7 +105,8 @@ export default function HeroCinematic() {
         <div className="relative flex flex-col lg:flex-row gap-12 lg:gap-16 lg:items-center justify-between w-full">
 
           {/* Left: brand + text */}
-          <div className="max-w-2xl text-brand-white lg:pr-24">
+          <div className="max-w-2xl text-brand-white lg:max-w-[640px] lg:pr-20">
+            <div className="rounded-[2rem] border border-brand-white/10 bg-brand-navy-950/26 px-5 py-6 shadow-[0_22px_80px_rgba(2,18,43,0.28)] backdrop-blur-md sm:px-7 sm:py-8 lg:px-8 lg:py-9">
 
             {/* Logo mark + eyebrow row */}
             <div ref={logoRef} className="mb-6 flex items-center gap-3">
@@ -128,7 +129,7 @@ export default function HeroCinematic() {
             </div>
 
             {/* Headline — word-by-word reveal */}
-            <h1 className="mb-5 text-3xl font-black leading-[1.06] tracking-[-0.02em] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem]">
+            <h1 className="mb-5 text-3xl font-black leading-[1.06] tracking-[-0.02em] drop-shadow-[0_10px_28px_rgba(2,18,43,0.35)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem]">
               {titleWords.map((word, i) => {
                 const isHighlight = word.toLowerCase().includes("st2w");
                 return (
@@ -151,7 +152,7 @@ export default function HeroCinematic() {
             {/* Subtitle */}
             <p
               ref={subRef}
-              className="mb-7 max-w-lg text-sm sm:text-base text-brand-mist-50/65 md:text-lg leading-[1.75] tracking-wide"
+              className="mb-7 max-w-lg text-sm text-brand-mist-50/88 drop-shadow-[0_6px_18px_rgba(2,18,43,0.28)] sm:text-base md:text-lg leading-[1.75] tracking-wide"
             >
               {st2wContent.hero.subtitle}
             </p>
@@ -169,17 +170,18 @@ export default function HeroCinematic() {
                 {st2wContent.hero.ctaSecondary.label}
               </Button>
             </div>
+            </div>
           </div>
 
           {/* Right: rail labels */}
-          <div ref={iconsRef} className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-3 lg:absolute lg:left-[56%] xl:left-[58%] lg:top-1/2 lg:z-20 lg:w-[230px] lg:-translate-y-1/2 lg:flex-col lg:gap-4">
+          <div ref={iconsRef} className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-3 lg:absolute lg:right-[18%] xl:right-[16%] lg:top-1/2 lg:z-20 lg:w-[240px] lg:-translate-y-1/2 lg:flex-col lg:gap-4">
             {st2wContent.hero.railLabels.map((label, idx) => {
               const Icon = railIcons[idx] || Coins;
               return (
                 <div
                   key={label}
                   data-hero-icon
-                  className="group flex items-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl border border-brand-white/12 bg-brand-navy-950/38 px-3 sm:px-5 py-2.5 sm:py-3.5 backdrop-blur-lg shadow-[0_18px_50px_rgba(2,18,43,0.22)] transition-all duration-300 hover:border-brand-gold-500/50 hover:bg-brand-navy-900/56 cursor-default lg:w-full"
+                  className="group flex items-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl border border-brand-white/16 bg-brand-navy-950/54 px-3 sm:px-5 py-2.5 sm:py-3.5 backdrop-blur-xl shadow-[0_22px_60px_rgba(2,18,43,0.34)] transition-all duration-300 hover:border-brand-gold-500/50 hover:bg-brand-navy-900/68 cursor-default lg:w-full"
                 >
                   <div
                     className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-gold-600/15 text-brand-gold-500 transition-all duration-300 group-hover:bg-brand-gold-600/25"
