@@ -68,13 +68,13 @@ export default function HeroCinematic() {
           src="/hero-bg.jpg"
           alt=""
           fill
-          className="object-cover brightness-[0.84] saturate-[0.92]"
+          className="object-cover brightness-[0.74] saturate-[0.9]"
           priority
         />
       </div>
 
-      <div className="absolute inset-0 z-[1] bg-brand-navy-950/24" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/52 via-brand-navy-950/18 to-brand-navy-950/42" />
+      <div className="absolute inset-0 z-[1] bg-brand-navy-950/36" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-brand-navy-950/62 via-brand-navy-950/28 to-brand-navy-950/48" />
 
       {/* Dot-grid overlay */}
       <div
@@ -106,7 +106,7 @@ export default function HeroCinematic() {
 
           {/* Left: brand + text */}
           <div className="max-w-2xl text-brand-white lg:max-w-[640px] lg:pr-20">
-            <div className="rounded-[2rem] border border-brand-white/10 bg-brand-navy-950/26 px-5 py-6 shadow-[0_22px_80px_rgba(2,18,43,0.28)] backdrop-blur-md sm:px-7 sm:py-8 lg:px-8 lg:py-9">
+            <div className="rounded-[2rem] border border-brand-white/10 bg-brand-navy-950/34 px-5 py-6 shadow-[0_22px_80px_rgba(2,18,43,0.34)] backdrop-blur-md sm:px-7 sm:py-8 lg:px-8 lg:py-9">
 
             {/* Logo mark + eyebrow row */}
             <div ref={logoRef} className="mb-6 flex items-center gap-3">
