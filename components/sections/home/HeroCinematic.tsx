@@ -73,9 +73,8 @@ export default function HeroCinematic() {
         />
       </div>
 
-      {/* Balanced navy overlays: keep image visible on left, darker on right for globe */}
-      <div className="absolute inset-0 z-[1] bg-brand-navy-950/22" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-transparent via-brand-navy-950/25 to-brand-navy-950/80" />
+      <div className="absolute inset-0 z-[1] bg-brand-navy-950/32" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-transparent via-transparent to-brand-navy-950/38" />
 
       {/* Dot-grid overlay */}
       <div
@@ -103,10 +102,10 @@ export default function HeroCinematic() {
 
       {/* Content */}
       <Container className="relative z-10 w-full py-24 sm:py-28 lg:py-0">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 lg:items-center justify-between w-full">
+        <div className="relative flex flex-col lg:flex-row gap-12 lg:gap-16 lg:items-center justify-between w-full">
 
           {/* Left: brand + text */}
-          <div className="max-w-2xl text-brand-white">
+          <div className="max-w-2xl text-brand-white lg:pr-24">
 
             {/* Logo mark + eyebrow row */}
             <div ref={logoRef} className="mb-6 flex items-center gap-3">
@@ -173,14 +172,14 @@ export default function HeroCinematic() {
           </div>
 
           {/* Right: rail labels */}
-          <div ref={iconsRef} className="grid grid-cols-2 sm:flex sm:flex-row lg:flex-col gap-2 sm:gap-3 lg:overflow-visible shrink-0">
+          <div ref={iconsRef} className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-3 lg:absolute lg:left-[56%] xl:left-[58%] lg:top-1/2 lg:z-20 lg:w-[230px] lg:-translate-y-1/2 lg:flex-col lg:gap-4">
             {st2wContent.hero.railLabels.map((label, idx) => {
               const Icon = railIcons[idx] || Coins;
               return (
                 <div
                   key={label}
                   data-hero-icon
-                  className="group flex items-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl border border-brand-white/8 bg-brand-navy-900/40 px-3 sm:px-5 py-2.5 sm:py-3.5 backdrop-blur-md transition-all duration-300 hover:border-brand-gold-500/50 hover:bg-brand-navy-800/70 cursor-default"
+                  className="group flex items-center gap-2 sm:gap-3 rounded-xl sm:rounded-2xl border border-brand-white/12 bg-brand-navy-950/38 px-3 sm:px-5 py-2.5 sm:py-3.5 backdrop-blur-lg shadow-[0_18px_50px_rgba(2,18,43,0.22)] transition-all duration-300 hover:border-brand-gold-500/50 hover:bg-brand-navy-900/56 cursor-default lg:w-full"
                 >
                   <div
                     className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-gold-600/15 text-brand-gold-500 transition-all duration-300 group-hover:bg-brand-gold-600/25"
