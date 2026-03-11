@@ -11,6 +11,7 @@ import { Coins, BookOpen, CreditCard, PlayCircle } from "lucide-react";
 const railIcons = [Coins, BookOpen, CreditCard, PlayCircle];
 
 export default function HeroCinematic() {
+  const showGlobe = false;
   const logoRef = useRef<HTMLDivElement>(null);
   const wordsRef = useRef<HTMLSpanElement[]>([]);
   const subRef = useRef<HTMLParagraphElement>(null);
@@ -95,9 +96,11 @@ export default function HeroCinematic() {
       />
 
       {/* Globe — right half */}
-      <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-[-25%] sm:right-[-20%] md:right-[-10%] lg:right-[-5%] w-[340px] h-[340px] sm:w-[440px] sm:h-[440px] md:w-[560px] md:h-[560px] lg:w-[700px] lg:h-[700px]">
-        <Globe />
-      </div>
+      {showGlobe && (
+        <div className="pointer-events-none absolute top-1/2 -translate-y-1/2 right-[-18%] sm:right-[-14%] md:right-[-8%] lg:right-[-2%] xl:right-[0%] w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[520px] md:h-[520px] lg:w-[620px] lg:h-[620px] xl:w-[660px] xl:h-[660px]">
+          <Globe />
+        </div>
+      )}
 
 
       {/* Content */}
@@ -174,7 +177,7 @@ export default function HeroCinematic() {
           </div>
 
           {/* Right: rail labels */}
-          <div ref={iconsRef} className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-3 lg:absolute lg:right-[18%] xl:right-[16%] lg:top-1/2 lg:z-20 lg:w-[240px] lg:-translate-y-1/2 lg:flex-col lg:gap-4">
+          <div ref={iconsRef} className="grid grid-cols-2 gap-2 sm:flex sm:flex-row sm:gap-3 lg:absolute lg:right-[22%] xl:right-[23%] lg:top-1/2 lg:z-20 lg:w-[240px] lg:-translate-y-1/2 lg:flex-col lg:gap-4">
             {st2wContent.hero.railLabels.map((label, idx) => {
               const Icon = railIcons[idx] || Coins;
               return (

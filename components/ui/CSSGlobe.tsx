@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import createGlobe, { COBEOptions } from "cobe";
 
 const GLOBE_CONFIG: COBEOptions = {
@@ -42,29 +42,28 @@ export function Globe({ className = "", config = {} }: GlobeProps) {
   const pointerInteractionMovement = useRef(0);
   const globeRef = useRef<ReturnType<typeof createGlobe> | null>(null);
 
-  const updatePointerInteraction = (val: number | null) => {
-    pointerInteracting.current = val;
+  const updatePointerInteraction = (value: number | null) => {
+    pointerInteracting.current = value;
     if (canvasRef.current) {
-      canvasRef.current.style.cursor = val !== null ? "grabbing" : "grab";
+      canvasRef.current.style.cursor = value !== null ? "grabbing" : "grab";
     }
   };
 
   const updateMovement = (clientX: number) => {
     if (pointerInteracting.current !== null) {
-      const delta = clientX - pointerInteracting.current;
-      pointerInteractionMovement.current = delta;
+      pointerInteractionMovement.current = clientX - pointerInteracting.current;
     }
   };
 
-  const onRender = useCallback(
-    (state: Record<string, number>) => {
-      if (!pointerInteracting.current) phiRef.current += 0.003;
-      state["phi"] = phiRef.current + pointerInteractionMovement.current / 200;
-      state["width"] = widthRef.current * 2;
-      state["height"] = widthRef.current * 2;
-    },
-    []
-  );
+  const onRender = useCallback((state: Record<string, number>) => {
+    if (pointerInteracting.current === null) {
+      phiRef.current += 0.003;
+    }
+
+    state.phi = phiRef.current + pointerInteractionMovement.current / 200;
+    state.width = widthRef.current * 2;
+    state.height = widthRef.current * 2;
+  }, []);
 
   const onResize = () => {
     if (canvasRef.current) {
@@ -95,7 +94,9 @@ export function Globe({ className = "", config = {} }: GlobeProps) {
         onRender,
       });
 
-      setTimeout(() => { canvas.style.opacity = "1"; }, 100);
+      setTimeout(() => {
+        canvas.style.opacity = "1";
+      }, 100);
     };
 
     frameId = requestAnimationFrame(init);
@@ -105,19 +106,25 @@ export function Globe({ className = "", config = {} }: GlobeProps) {
       globeRef.current?.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [config, onRender]);
 
   return (
-    <div className={`relative w-full h-full ${className}`}>
+    <div className={`relative h-full w-full ${className}`}>
       <canvas
         ref={canvasRef}
         style={{ width: "100%", height: "100%" }}
         className="opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
-        onPointerDown={(e) => updatePointerInteraction(e.clientX - pointerInteractionMovement.current)}
+        onPointerDown={(event) =>
+          updatePointerInteraction(
+            event.clientX - pointerInteractionMovement.current
+          )
+        }
         onPointerUp={() => updatePointerInteraction(null)}
         onPointerOut={() => updatePointerInteraction(null)}
-        onMouseMove={(e) => updateMovement(e.clientX)}
-        onTouchMove={(e) => e.touches[0] && updateMovement(e.touches[0].clientX)}
+        onMouseMove={(event) => updateMovement(event.clientX)}
+        onTouchMove={(event) =>
+          event.touches[0] && updateMovement(event.touches[0].clientX)
+        }
       />
     </div>
   );
