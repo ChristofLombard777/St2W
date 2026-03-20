@@ -33,7 +33,7 @@ export default function Header() {
             scrolled
               ? "bg-white/10 backdrop-blur-2xl border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.18)] py-2.5 px-5"
               : onHero
-                ? "bg-white/5 backdrop-blur-xl border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.12)] py-3 px-5"
+                ? "bg-brand-navy-950/50 backdrop-blur-xl border-white/20 shadow-[0_8px_28px_rgba(2,18,43,0.32)] py-3 px-5"
                 : "bg-white/70 backdrop-blur-xl border-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.08)] py-3 px-5"
           )}
         >
@@ -48,9 +48,9 @@ export default function Header() {
               <Image
                 src="/logos/St2W Logo.png"
                 alt="St2W"
-                width={44}
-                height={44}
-                className="object-contain drop-shadow-[0_0_8px_rgba(212,169,60,0.35)]"
+                width={96}
+                height={36}
+                className="h-9 w-auto object-contain drop-shadow-[0_0_10px_rgba(212,169,60,0.35)]"
               />
             </Link>
 
@@ -70,7 +70,7 @@ export default function Header() {
                         : scrolled
                           ? "text-brand-gold-400 hover:text-brand-gold-300 hover:bg-brand-gold-500/10"
                           : onHero
-                            ? "text-white/75 hover:text-white hover:bg-white/10"
+                            ? "text-white/92 hover:text-white hover:bg-white/14"
                             : "text-brand-slate-500 hover:text-brand-navy-950 hover:bg-brand-navy-950/5"
                     )}
                   >
