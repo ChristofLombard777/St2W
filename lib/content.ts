@@ -147,7 +147,7 @@ export const servicesContent = {
 export const st2wContent = {
   hero: {
     eyebrow: "St2W",
-    title: "St2W, Short-term to Wealth",
+    title: "St2W Short-term to Wealth",
     subtitle: "An EASY PATHWAY to accelerate Financial Increase and Wealth Generation",
     ctaPrimary: { label: "WhatsApp Us to Get Started", href: "https://wa.me/27724688254" },
     ctaSecondary: { label: "How it Works", href: "#how-it-works" },

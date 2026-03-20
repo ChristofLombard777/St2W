@@ -46,7 +46,7 @@ export default function Header() {
               aria-label={`${BRAND.name} Home`}
             >
               <Image
-                src="/logos/St2W Logo Cropped.png"
+                src="/logos/St2W Logo.png"
                 alt="St2W"
                 width={44}
                 height={44}
