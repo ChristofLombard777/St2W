@@ -131,7 +131,7 @@ export default function HeroCinematic() {
                       ref={(el) => { if (el) wordsRef.current[i] = el; }}
                       className={
                         isHighlight
-                          ? "inline-block text-gradient-gold"
+                          ? "inline-flex items-center rounded-full px-3 py-1.5 text-brand-navy-950 btn-gold shadow-[0_8px_24px_rgba(212,169,60,0.35)]"
                           : "inline-block"
                       }
                     >
