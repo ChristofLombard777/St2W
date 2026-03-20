@@ -111,24 +111,14 @@ export default function HeroCinematic() {
           <div className="max-w-2xl text-brand-white lg:max-w-[640px] lg:pr-20">
             <div className="rounded-[2rem] border border-brand-white/10 bg-brand-navy-950/34 px-5 py-6 shadow-[0_22px_80px_rgba(2,18,43,0.34)] backdrop-blur-md sm:px-7 sm:py-8 lg:px-8 lg:py-9">
 
-            {/* Logo mark + eyebrow row */}
-            <div ref={logoRef} className="mb-6 flex items-center gap-3">
-              <Image
-                src="/logos/St2W Logo.png"
-                alt="St2W Logo"
-                width={80}
-                height={80}
-                className="object-contain drop-shadow-[0_0_12px_rgba(212,169,60,0.4)] w-16 h-16 sm:w-20 sm:h-20"
-                priority
-              />
-              <div className="flex flex-col">
-                <span className="text-[10px] font-semibold tracking-[0.3em] text-brand-gold-500 uppercase gold-glow">
-                  Short-Term to Wealth
-                </span>
-                <span className="text-[10px] font-medium tracking-[0.15em] text-brand-white/40 uppercase mt-0.5">
-                  An easy pathway to financial increase
-                </span>
-              </div>
+            {/* Eyebrow */}
+            <div ref={logoRef} className="mb-6 space-y-1.5">
+              <p className="text-xs font-bold tracking-[0.22em] text-brand-gold-400 uppercase drop-shadow-[0_4px_14px_rgba(2,18,43,0.4)] sm:text-sm">
+                Short-Term To Wealth
+              </p>
+              <p className="text-xs font-semibold tracking-[0.12em] text-brand-white/95 uppercase drop-shadow-[0_4px_14px_rgba(2,18,43,0.38)] sm:text-sm">
+                An Easy Pathway To Financial Increase
+              </p>
             </div>
 
             {/* Headline — word-by-word reveal */}

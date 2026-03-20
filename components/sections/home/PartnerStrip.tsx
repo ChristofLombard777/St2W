@@ -23,8 +23,8 @@ function LogoCarousel({ large = false }: { large?: boolean }) {
                 src={`/logos/insurers/${logo.file}`}
                 alt={logo.name}
                 fill
-                className="object-contain p-2"
-                sizes="(max-width: 768px) 132px, 164px"
+                className="object-contain p-3"
+                sizes="(max-width: 768px) 124px, 152px"
               />
             </div>
           ))}
@@ -37,8 +37,8 @@ function LogoCarousel({ large = false }: { large?: boolean }) {
                 src={`/logos/insurers/${logo.file}`}
                 alt=""
                 fill
-                className="object-contain p-2"
-                sizes="(max-width: 768px) 132px, 164px"
+                className="object-contain p-3"
+                sizes="(max-width: 768px) 124px, 152px"
               />
             </div>
           ))}
@@ -53,10 +53,7 @@ export default function PartnerStrip() {
   return (
     <section className="py-12 bg-brand-navy-950 border-y border-white/10">
       <Container>
-        <div className="space-y-5">
-          <LogoCarousel />
-          <LogoCarousel large />
-        </div>
+        <LogoCarousel />
       </Container>
     </section>
   );
