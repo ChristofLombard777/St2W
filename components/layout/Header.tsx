@@ -52,9 +52,6 @@ export default function Header() {
                 height={44}
                 className="object-contain drop-shadow-[0_0_8px_rgba(212,169,60,0.35)]"
               />
-              <div className="flex items-center justify-center rounded-xl text-brand-navy-950 font-black text-sm tracking-tight btn-gold px-3 py-1.5">
-                St2W
-              </div>
             </Link>
 
             {/* Desktop nav — centered */}
