@@ -176,37 +176,44 @@ export const st2wContent = {
   howItWorks: {
     heading: "How to earn",
     steps: [
-      "Become a client of Worldwide Wealth",
-      "Sign up and become an affiliate client",
-      "Tell and introduce 2+ friends to Worldwide Wealth"
+      "Become a participating client OR an affiliate member",
+      "Introduce family, relatives, friends, colleagues, and others to Worldwide Wealth",
+      "That's all there is to it — absolutely NO selling involved!"
     ]
   },
   successSystem: {
     heading: "The success system",
     bullets: [
-      "100% part-time",
-      "Distribution of wealth through shared value",
-      "Rich pay outs helping people into better things",
-      "Minimal one-time setup fee of either R500 or R1,000",
-      "It’s free, no extra fees levied"
+      "100% part-time — work it around your existing life",
+      "±50% of product-related income distributed to participating clients and affiliates monthly",
+      "As the number of clients grows, your passive earnings increase through leveraging",
+      "Once-off setup fee from R500 — no monthly subscription fees, ever",
+      "Administration costs are absorbed by the system"
     ]
+  },
+  leveraging: {
+    heading: "The power of leveraging",
+    quote: "I would rather earn 1% off a hundred people's efforts than 100% of my own efforts.",
+    author: "Jean Paul Getty",
+    body: "Compounding and leveraging is the only way to earn money with little or no effort. As the number of clients increases, the passive earnings of participating clients who engage also increase through leveraging."
   },
   anotherIncome: {
     heading: "Another income stream",
     bullets: [
-      "St2W is an income and wealth creator, a perfect extra income stream",
-      "Easy, anyone can benefit",
-      "Monthly recurring income potential",
-      "Designed to address common financial challenges"
+      "St2W is an income and wealth creator — a perfect extra income stream",
+      "Easy — anyone can benefit, no specialist skills required",
+      "Monthly passive income that grows as your referral network grows",
+      "Pays out accruals of R500 or more directly into your bank account"
     ]
   },
   earnings: {
     heading: "Earnings",
     bullets: [
-      "Affiliates and clients earn bonuses when Worldwide Wealth successfully becomes intermediary for their introductions",
-      "Financial instruments yield income which is handsomely shared with the affiliates",
-      "Depending on plan and buy-up options, up to R5,000, R10,000, R15,000, or R20,000 per month",
-      "The income wallet is bequeathable"
+      "Participating clients and affiliates earn bonuses when Worldwide Wealth successfully becomes intermediary for their introductions on qualifying business",
+      "±50% of product-related income is distributed monthly via the referral network system",
+      "Depending on plan and buy-up options — up to R5,000, R10,000, R15,000, R20,000 or R35,000 monthly",
+      "Pay outs activate once at least 2 qualifying introductions have been successfully placed",
+      "Pay outs are made on accruals of R500 or more, paid into your bank account"
     ],
     standardPlan: [
       { name: "Starter", base: "Up to R2,500", buyUp: "Up to R5,000" },
@@ -216,8 +223,8 @@ export const st2wContent = {
       { name: "Premier", base: "Up to R10,000", buyUp: "Up to R20,000" }
     ],
     specialNotes: [
-      { plan: "Premier Plus", note: "Clients with multiple products, capped on R35,000 per month" },
-      { plan: "Unlimited", note: "No specific product requirement, special offering to only 120 clients in South Africa who buy in to earn an unlimited income" }
+      { plan: "Premier Plus", note: "Multiple qualifying products — capped at R35,000 per month" },
+      { plan: "Unlimited", note: "No specific product requirement. Special buy-in offering limited to only 120 clients in South Africa — unlimited monthly income potential" }
     ]
   },
   fees: {
@@ -230,21 +237,22 @@ export const st2wContent = {
       { plan: "Premier", setup: "R1,000", buyUp: "Optional buy-up, R1,000" }
     ],
     specialFees: [
-      { plan: "Premier Plus", fee: "R5,000", note: "Once off, one time" },
-      { plan: "Unlimited", fee: "R26,000", note: "Once off, one time" }
+      { plan: "Premier Plus", fee: "R5,000", note: "Once-off setup" },
+      { plan: "Unlimited", fee: "R26,000", note: "Once-off buy-in — limited to 120 clients in SA" }
     ],
-    noMonthly: "Affiliation is free, no monthly fees"
+    noMonthly: "Affiliation is free — no monthly fees are levied or collected",
+    note: "Pay outs can be delayed up to three months due to policy activations and underwriting requirements on new business. Upgrades and buy-ups are constantly available."
   },
   finalCTA: {
     heading: "Finally",
     bullets: [
-      "Most people want an extra stream of income",
-      "Come into the system, enrol and pay the set up fee",
-      "Affiliation is free, no monthly fees",
-      "Introduce at least 2 clients with qualifying products to activate your income stream",
-      "Don’t sell the plan, just introduce",
+      "Almost all people want an extra stream of income",
+      "Every enrolee pays a once-off setup fee upfront — affiliation is free, no monthly fees",
+      "Introduce at least 2 clients with qualifying products to Worldwide Wealth to activate pay outs",
+      "Only accruals of R500 or more are paid out to your bank account",
+      "Don't sell the plan — just refer or introduce",
       "St2W is truly an easy pathway to financial increase",
-      "The secret of getting ahead is to get started"
+      "The only way to get ahead is to get started"
     ],
     goingFromHere: {
       heading: "Going from here",

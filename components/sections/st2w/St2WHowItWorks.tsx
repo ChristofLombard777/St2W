@@ -41,7 +41,7 @@ export default function St2WHowItWorks() {
           <SectionHeading
             title={st2wContent.howItWorks.heading}
             align="center"
-            className="[&_h2]:text-white"
+            headingClass="heading-gradient-white"
           />
         </div>
 
