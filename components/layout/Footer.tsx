@@ -24,13 +24,13 @@ export default function Footer() {
 
           {/* Nav Col */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-gold-600">Quick Links</h4>
+            <h4 className="text-sm font-semibold font-display uppercase tracking-wider text-sky-400">Quick Links</h4>
             <ul className="space-y-3">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-brand-mist-100/80 transition-colors hover:text-brand-gold-600 focus-visible:text-brand-gold-600"
+                    className="text-sm text-brand-mist-100/80 transition-colors hover:text-sky-400 focus-visible:text-sky-400"
                   >
                     {link.label}
                   </Link>
@@ -41,14 +41,14 @@ export default function Footer() {
 
           {/* Contact Col */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-brand-gold-600">Contact</h4>
+            <h4 className="text-sm font-semibold font-display uppercase tracking-wider text-sky-400">Contact</h4>
             <ul className="space-y-3">
               <li>
                 <a
                   href={BRAND.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-brand-mist-100/80 transition-colors hover:text-brand-gold-600 focus-visible:text-brand-gold-600"
+                  className="text-sm text-brand-mist-100/80 transition-colors hover:text-sky-400 focus-visible:text-sky-400"
                 >
                   WhatsApp: {BRAND.whatsappNumber}
                 </a>
@@ -56,7 +56,7 @@ export default function Footer() {
               <li>
                 <a
                   href={BRAND.websiteFullUrl}
-                  className="text-sm text-brand-mist-100/80 transition-colors hover:text-brand-gold-600 focus-visible:text-brand-gold-600"
+                  className="text-sm text-brand-mist-100/80 transition-colors hover:text-sky-400 focus-visible:text-sky-400"
                 >
                   {BRAND.websiteUrl}
                 </a>
@@ -71,7 +71,7 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-right">
             <span>{BRAND.fsp}</span>
-            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-brand-gold-600/50"></span>
+            <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-sky-500/50"></span>
             <span>{BRAND.fspNumber}</span>
           </div>
         </div>

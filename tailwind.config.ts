@@ -37,6 +37,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
+        display: ["var(--font-display)", "var(--font-geist-sans)"],
       },
       backgroundImage: {
         'hero-gradient': "linear-gradient(180deg, #022248 0%, #091E39 55%, #07172C 100%)",

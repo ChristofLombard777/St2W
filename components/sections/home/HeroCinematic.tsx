@@ -86,12 +86,12 @@ export default function HeroCinematic() {
         }}
       />
 
-      {/* Radial ambient glow — richer gold */}
+      {/* Radial ambient glow */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 65% 55% at 68% 50%, rgba(200,168,75,0.10) 0%, transparent 65%), radial-gradient(ellipse 30% 30% at 50% 80%, rgba(212,169,60,0.05) 0%, transparent 60%)",
+            "radial-gradient(ellipse 65% 55% at 68% 50%, rgba(56,140,220,0.06) 0%, transparent 65%), radial-gradient(ellipse 30% 30% at 50% 80%, rgba(56,140,220,0.04) 0%, transparent 60%)",
         }}
       />
 
@@ -122,7 +122,7 @@ export default function HeroCinematic() {
             </div>
 
             {/* Headline — word-by-word reveal */}
-            <h1 className="mb-5 text-3xl font-black leading-[1.06] tracking-[-0.02em] drop-shadow-[0_10px_28px_rgba(2,18,43,0.35)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem]">
+            <h1 className="mb-5 font-display text-3xl font-bold leading-[1.06] tracking-[-0.035em] drop-shadow-[0_10px_28px_rgba(2,18,43,0.35)] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.25rem]">
               {titleWords.map((word, i) => {
                 const isHighlight = word.toLowerCase().includes("st2w");
                 return (
@@ -178,7 +178,7 @@ export default function HeroCinematic() {
                 >
                   <div
                     className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-gold-600/15 text-brand-gold-500 transition-all duration-300 group-hover:bg-brand-gold-600/25"
-                    style={{ boxShadow: "0 0 14px rgba(212,169,60,0.3)" }}
+                    style={{ boxShadow: "0 0 14px rgba(56,140,220,0.25)" }}
                   >
                     <Icon className="h-4 w-4" />
                   </div>

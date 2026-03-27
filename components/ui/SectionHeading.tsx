@@ -6,9 +6,10 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "left" | "center";
   className?: string;
+  headingClass?: string;
 }
 
-export default function SectionHeading({ eyebrow, title, subtitle, align = "left", className }: SectionHeadingProps) {
+export default function SectionHeading({ eyebrow, title, subtitle, align = "left", className, headingClass }: SectionHeadingProps) {
   return (
     <div className={cn("max-w-[700px]", align === "center" && "mx-auto text-center", className)}>
       {eyebrow && (
@@ -16,7 +17,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = "left
           {eyebrow}
         </span>
       )}
-      <h2 className="mb-5 text-3xl font-bold tracking-[-0.02em] text-brand-navy-950 md:text-4xl lg:text-5xl xl:text-[3.5rem] leading-[1.1]">
+      <h2 className={`mb-5 font-display text-3xl font-extrabold tracking-[-0.04em] text-brand-navy-950 md:text-4xl lg:text-5xl xl:text-[3.75rem] leading-[1.04] ${headingClass ?? ""}`} style={{ textWrap: 'balance' } as React.CSSProperties}>
         {title}
       </h2>
       {subtitle && (

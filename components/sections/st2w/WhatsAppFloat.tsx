@@ -28,7 +28,7 @@ export default function WhatsAppFloat() {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-brand-gold-600 px-5 py-3 text-brand-navy-950 shadow-soft transition-all duration-300 hover:scale-105 hover:bg-brand-gold-700 hover:shadow-glow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-navy-900 focus-visible:ring-offset-2",
+        "btn-gold fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full px-5 py-3 text-brand-navy-950 transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-brand-navy-900 focus-visible:ring-offset-2",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
       )}
       aria-label="Contact us on WhatsApp"

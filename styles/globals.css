@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --shine-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 :root {
   --hero-grad: linear-gradient(180deg, #022248 0%, #091E39 55%, #07172C 100%);
 }
@@ -16,7 +22,7 @@ html, body {
 }
 
 body {
-  @apply bg-brand-mist-50 text-brand-navy-900 antialiased font-sans;
+  @apply bg-brand-navy-950 text-brand-mist-50 antialiased font-sans;
 }
 
 ::selection {
@@ -36,60 +42,127 @@ body {
   100% { transform: translateX(260%)  skewX(-20deg); }
 }
 
-.btn-gold {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-    105deg,
-    #c8a84b 0%,
-    #f0d06a 28%,
-    #e4bc50 45%,
-    #fbe97a 58%,
-    #d4a93c 80%,
-    #b8922e 100%
-  );
-  box-shadow:
-    0 0 0 1px rgba(255, 220, 80, 0.35) inset,
-    0 2px 0 rgba(255, 255, 200, 0.25) inset,
-    0 6px 20px rgba(210, 160, 40, 0.55),
-    0 0 40px rgba(220, 175, 55, 0.28);
-  transition: box-shadow 0.3s ease, transform 0.2s ease, filter 0.3s ease;
-}
+@layer components {
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      105deg,
+      #b8881e 0%,
+      #f0c843 20%,
+      #ffe066 38%,
+      #ffd700 50%,
+      #f5c518 62%,
+      #e8b020 80%,
+      #c9921a 100%
+    );
+    box-shadow:
+      0 0 0 1px rgba(255, 230, 80, 0.5) inset,
+      0 2px 0 rgba(255, 255, 180, 0.35) inset,
+      0 6px 24px rgba(220, 170, 20, 0.65),
+      0 0 50px rgba(255, 210, 40, 0.35);
+    transition: box-shadow 0.3s ease, transform 0.2s ease, filter 0.3s ease;
+  }
 
-.btn-gold::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    105deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.55) 50%,
-    transparent 70%
-  );
-  transform: translateX(-120%) skewX(-20deg);
-  animation: gold-glare 2.8s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 1;
-}
+  .btn-gold::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.55) 50%,
+      transparent 70%
+    );
+    transform: translateX(-120%) skewX(-20deg);
+    animation: gold-glare 2.8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
 
-.btn-gold:hover {
-  filter: brightness(1.08) saturate(1.1);
-  box-shadow:
-    0 0 0 1px rgba(255, 230, 100, 0.5) inset,
-    0 2px 0 rgba(255, 255, 200, 0.35) inset,
-    0 8px 28px rgba(210, 160, 40, 0.75),
-    0 0 60px rgba(220, 175, 55, 0.4);
-  transform: translateY(-1px);
-}
+  .btn-gold:hover {
+    filter: brightness(1.08) saturate(1.1);
+    box-shadow:
+      0 0 0 1px rgba(255, 230, 100, 0.5) inset,
+      0 2px 0 rgba(255, 255, 200, 0.35) inset,
+      0 8px 28px rgba(210, 160, 40, 0.75),
+      0 0 60px rgba(220, 175, 55, 0.4);
+    transform: translateY(-1px);
+  }
 
-.btn-gold:active {
-  transform: translateY(0);
-  filter: brightness(0.97);
+  .btn-gold:active {
+    transform: translateY(0);
+    filter: brightness(0.97);
+  }
 }
 
 /* ── Gold glow for icon circles, eyebrow accents ── */
 .gold-glow {
   text-shadow: 0 0 12px rgba(212, 175, 90, 0.7), 0 0 28px rgba(212, 175, 90, 0.35);
+}
+
+/* ── Animated Shine Border ── */
+@keyframes shine-rotate {
+  to { --shine-angle: 360deg; }
+}
+
+.shine-card {
+  --shine-angle: 0deg;
+  position: relative;
+  border: 1.5px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(var(--card-bg, #0B1E38), var(--card-bg, #0B1E38)),
+    conic-gradient(
+      from var(--shine-angle),
+      rgba(255,255,255,0.06) 0%,
+      rgba(255,255,255,0.06) 30%,
+      rgba(130,190,255,0.45) 42%,
+      rgba(255,255,255,0.7) 50%,
+      rgba(130,190,255,0.45) 58%,
+      rgba(255,255,255,0.06) 70%,
+      rgba(255,255,255,0.06) 100%
+    );
+  animation: shine-rotate 4s linear infinite;
+}
+
+.shine-card-white {
+  --shine-angle: 0deg;
+  position: relative;
+  border: 1.5px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(#ffffff, #ffffff),
+    conic-gradient(
+      from var(--shine-angle),
+      rgba(2,34,72,0.08) 0%,
+      rgba(2,34,72,0.08) 30%,
+      rgba(80,140,220,0.5) 42%,
+      rgba(130,190,255,0.8) 50%,
+      rgba(80,140,220,0.5) 58%,
+      rgba(2,34,72,0.08) 70%,
+      rgba(2,34,72,0.08) 100%
+    );
+  animation: shine-rotate 4s linear infinite;
+}
+
+/* ── Editorial heading gradient — white shimmer for dark sections ── */
+.heading-gradient-white {
+  background: linear-gradient(
+    160deg,
+    #ffffff   0%,
+    #dff0ff  25%,
+    #ffffff  50%,
+    #b8e0ff  72%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 24px rgba(147,210,255,0.3));
 }
 
 /* ── Gold gradient text ── */
@@ -144,6 +217,53 @@ body {
 .animate-reveal-up   { animation: reveal-up   0.75s cubic-bezier(0.22,1,0.36,1) both; }
 .animate-reveal-left { animation: reveal-left 0.7s  cubic-bezier(0.22,1,0.36,1) both; }
 .animate-reveal-right{ animation: reveal-right 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* ── Glass step card sweep ── */
+@keyframes glass-sweep {
+  0%   { transform: translateX(-110%) skewX(-15deg); opacity: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translateX(210%)  skewX(-15deg); opacity: 0; }
+}
+
+.glass-step {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(11,30,56,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.1);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.glass-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 45%;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(147,210,255,0.18) 50%,
+    transparent 80%
+  );
+  animation: glass-sweep 4s ease-in-out var(--sweep-delay, 0s) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-step:hover {
+  border-color: rgba(56,189,248,0.35);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,0.2),
+    0 12px 40px rgba(0,0,0,0.35),
+    0 0 50px rgba(56,189,248,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  transform: translateY(-3px);
+}
 
 /* ── Section number accent ── */
 .section-number {

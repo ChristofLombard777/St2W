@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <HeroCinematic />
-      <div className="relative z-20 bg-white">
+      <div className="relative z-20">
         <PartnerStrip />
         <St2WStoryScroll />
         <St2WChallenges />

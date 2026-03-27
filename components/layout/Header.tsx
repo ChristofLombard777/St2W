@@ -31,10 +31,10 @@ export default function Header() {
           className={cn(
             "relative pointer-events-auto w-full max-w-5xl rounded-2xl border transition-all duration-500 ease-out",
             scrolled
-              ? "bg-white/10 backdrop-blur-2xl border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.18)] py-2.5 px-5"
+              ? "bg-brand-navy-900/90 backdrop-blur-2xl border-white/10 shadow-[0_10px_30px_rgba(2,18,43,0.5)] py-2.5 px-5"
               : onHero
-                ? "bg-brand-navy-950/50 backdrop-blur-xl border-white/20 shadow-[0_8px_28px_rgba(2,18,43,0.32)] py-3 px-5"
-                : "bg-white/70 backdrop-blur-xl border-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.08)] py-3 px-5"
+                ? "bg-brand-navy-900/80 backdrop-blur-xl border-white/10 shadow-[0_10px_28px_rgba(2,18,43,0.4)] py-3 px-5"
+                : "bg-brand-navy-900/90 backdrop-blur-xl border-white/10 shadow-[0_10px_28px_rgba(2,18,43,0.5)] py-3 px-5"
           )}
         >
           <div className="flex items-center justify-between">
@@ -46,11 +46,11 @@ export default function Header() {
               aria-label={`${BRAND.name} Home`}
             >
               <Image
-                src="/logos/St2W Logo.png"
+                src="/logos/St2W Logo Cropped.png"
                 alt="St2W"
-                width={96}
-                height={36}
-                className="h-9 w-auto object-contain drop-shadow-[0_0_10px_rgba(212,169,60,0.35)]"
+                width={112}
+                height={42}
+                className="h-10 w-auto rounded-lg border border-brand-gold-500/30 bg-brand-navy-950/90 p-1.5 object-contain shadow-[0_0_14px_rgba(212,169,60,0.25)]"
               />
             </Link>
 
@@ -63,15 +63,11 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "relative px-3.5 py-1.5 text-sm font-medium rounded-lg transition-all duration-200",
+                      "relative rounded-lg px-4 py-2 text-base font-semibold tracking-[0.01em] transition-all duration-200",
                       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold-600",
                       isActive
-                        ? "text-brand-gold-500 bg-brand-gold-500/10"
-                        : scrolled
-                          ? "text-brand-gold-400 hover:text-brand-gold-300 hover:bg-brand-gold-500/10"
-                          : onHero
-                            ? "text-white/92 hover:text-white hover:bg-white/14"
-                            : "text-brand-slate-500 hover:text-brand-navy-950 hover:bg-brand-navy-950/5"
+                        ? "bg-brand-gold-500/20 text-brand-gold-400"
+                        : "text-white/80 hover:text-white hover:bg-white/10"
                     )}
                   >
                     {link.label}
@@ -90,10 +86,8 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  "hidden md:flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold tracking-wide transition-all duration-200 overflow-hidden relative",
-                  onHero || scrolled
-                    ? "btn-gold text-brand-navy-950"
-                    : "border border-brand-navy-950/20 text-brand-navy-950 hover:bg-brand-navy-950 hover:text-white"
+                  "hidden md:flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold tracking-wide transition-all duration-200 overflow-hidden relative",
+                  "btn-gold text-brand-navy-950"
                 )}
               >
                 <MessageCircle className="h-3.5 w-3.5" />
@@ -103,9 +97,7 @@ export default function Header() {
               <button
                 className={cn(
                   "md:hidden flex items-center justify-center h-8 w-8 rounded-lg transition-colors",
-                  onHero || scrolled
-                    ? "text-white/80 hover:text-white hover:bg-white/10"
-                    : "text-brand-navy-950 hover:bg-brand-navy-950/5"
+                  "text-white/80 hover:text-white hover:bg-white/10"
                 )}
                 aria-label={menuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMenuOpen((v) => !v)}
@@ -125,7 +117,7 @@ export default function Header() {
           >
             <div className={cn(
               "border-t pt-3 pb-1",
-              onHero || scrolled ? "border-white/10" : "border-brand-navy-950/10"
+              "border-white/10"
             )}>
               <nav className="flex flex-col gap-0.5">
                 {NAV_LINKS.map((link) => {
@@ -135,14 +127,10 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       className={cn(
-                        "px-3 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-between",
+                        "px-3.5 py-3 rounded-lg text-base font-medium transition-colors flex items-center justify-between",
                         isActive
-                          ? "text-brand-gold-500 font-semibold bg-brand-gold-500/10"
-                          : scrolled
-                            ? "text-brand-gold-400 hover:text-brand-gold-300 hover:bg-brand-gold-500/10"
-                            : onHero
-                              ? "text-white/75 hover:text-white hover:bg-white/10"
-                              : "text-brand-slate-500 hover:text-brand-navy-950 hover:bg-brand-navy-950/5"
+                          ? "text-brand-gold-400 font-semibold bg-brand-gold-500/15"
+                          : "text-white/80 hover:text-white hover:bg-white/10"
                       )}
                     >
                       {link.label}
@@ -155,11 +143,8 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "mt-1 px-3 py-2.5 rounded-lg text-sm font-semibold flex items-center gap-2 transition-colors",
-                    "text-brand-gold-600 border",
-                    onHero || scrolled
-                      ? "border-brand-gold-600/30 hover:bg-brand-gold-600/10"
-                      : "border-brand-gold-600/40 hover:bg-brand-gold-600/10"
+                    "mt-1 px-3.5 py-3 rounded-lg text-base font-semibold flex items-center gap-2 transition-colors",
+                    "text-brand-gold-500 border border-brand-gold-600/30 hover:bg-brand-gold-600/10"
                   )}
                 >
                   <MessageCircle className="h-4 w-4" />
