@@ -187,7 +187,7 @@ export const st2wContent = {
       "100% part-time — work it around your existing life",
       "±50% of product-related income distributed to participating clients and affiliates monthly",
       "As the number of clients grows, your passive earnings increase through leveraging",
-      "Once-off setup fee from R500 — no monthly subscription fees, ever",
+      "Once-off setup fee from R500 — no monthly subscription fees",
       "Administration costs are absorbed by the system"
     ]
   },
