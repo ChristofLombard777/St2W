@@ -154,6 +154,10 @@ export const st2wContent = {
     extraLine: "Or visit worldwidewealth.co.za",
     railLabels: ["Earnings", "Plans", "Fees", "Activation"]
   },
+  valueShift: {
+    heading: "Turn necessity into opportunity",
+    body: "Your insurance does not have to remain a grudge purchase. With St2W, the products you already need can become part of a shared-value system that helps you earn extra income and create wealth."
+  },
   story: {
     heading: "The dream outcome",
     steps: [
@@ -197,6 +201,16 @@ export const st2wContent = {
     author: "Jean Paul Getty",
     body: "Compounding and leveraging is the only way to earn money with little or no effort. As the number of clients increases, the passive earnings of participating clients who engage also increase through leveraging."
   },
+  quotes: [
+    {
+      text: "The best time to plant a tree was 20 years ago. The second best time is now.",
+      author: "Chinese Proverb"
+    },
+    {
+      text: "Do not save what is left after spending, but spend what is left after saving.",
+      author: "Warren Buffett"
+    }
+  ],
   anotherIncome: {
     heading: "Another income stream",
     bullets: [
@@ -223,8 +237,8 @@ export const st2wContent = {
       { name: "Premier", base: "Up to R10,000", buyUp: "Up to R20,000" }
     ],
     specialNotes: [
-      { plan: "Premier Plus", note: "Multiple qualifying products — capped at R35,000 per month" },
-      { plan: "Unlimited", note: "No specific product requirement. Special buy-in offering limited to only 120 clients in South Africa — unlimited monthly income potential" }
+      { plan: "Premier Plus", note: "Capped at R35,000 per month" },
+      { plan: "Unlimited", note: "Limited to only 120 clients in South Africa — Unlimited monthly income potential" }
     ]
   },
   fees: {
