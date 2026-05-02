@@ -4,7 +4,6 @@ import St2WValueShift from "@/components/sections/st2w/St2WValueShift";
 import St2WStoryScroll from "@/components/sections/st2w/St2WStoryScroll";
 import St2WChallenges from "@/components/sections/st2w/St2WChallenges";
 import St2WHowItWorks from "@/components/sections/st2w/St2WHowItWorks";
-import St2WQuotes from "@/components/sections/st2w/St2WQuotes";
 import St2WEarnings from "@/components/sections/st2w/St2WEarnings";
 import St2WFees from "@/components/sections/st2w/St2WFees";
 import St2WFinalCTA from "@/components/sections/st2w/St2WFinalCTA";
@@ -20,7 +19,6 @@ export default function Home() {
         <St2WStoryScroll />
         <St2WChallenges />
         <St2WHowItWorks />
-        <St2WQuotes />
         <St2WEarnings />
         <St2WFees />
         <St2WFinalCTA />

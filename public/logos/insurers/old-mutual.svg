@@ -1,32 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 76" role="img" aria-label="Old Mutual Insure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72" role="img" aria-label="Old Mutual Insure">
   <title>Old Mutual Insure</title>
 
-  <!-- Green circle emblem -->
-  <circle cx="36" cy="38" r="35" fill="#007037"/>
+  <!-- Green circle background -->
+  <circle cx="36" cy="36" r="34" fill="#007037"/>
 
-  <!-- Simplified Old Mutual "tree of life" mark in white -->
-  <!-- Left figure/leaf -->
-  <path d="M23,54 C14,42 17,26 26,18 C28,26 28,40 25,50 Z" fill="white"/>
-  <!-- Right figure/leaf -->
-  <path d="M49,54 C58,42 55,26 46,18 C44,26 44,40 47,50 Z" fill="white"/>
-  <!-- Centre trunk -->
-  <rect x="34" y="16" width="4" height="36" rx="2" fill="white"/>
-  <!-- Cross branch -->
-  <rect x="25" y="28" width="22" height="3" rx="1.5" fill="white"/>
+  <!-- Stylised botanical / people mark in white -->
+  <!-- Centre vertical stem -->
+  <rect x="34.5" y="10" width="3" height="40" rx="1.5" fill="white"/>
+  <!-- Horizontal crossbar -->
+  <rect x="22" y="25" width="28" height="3" rx="1.5" fill="white"/>
+  <!-- Left arc leaf -->
+  <path d="M35,22 Q14,28 18,50 Q24,38 35,35 Z" fill="white"/>
+  <!-- Right arc leaf -->
+  <path d="M37,22 Q58,28 54,50 Q48,38 37,35 Z" fill="white"/>
+  <!-- Left lower leaf -->
+  <path d="M35,35 Q18,42 22,58 Q28,46 35,44 Z" fill="white"/>
+  <!-- Right lower leaf -->
+  <path d="M37,35 Q54,42 50,58 Q44,46 37,44 Z" fill="white"/>
 
   <!-- OLD MUTUAL text -->
-  <text x="82" y="29"
+  <text x="82" y="28"
     font-family="Arial,Helvetica,sans-serif"
     font-weight="800"
-    font-size="18"
+    font-size="17"
     fill="#1a1a1a"
-    letter-spacing="1.4">OLD MUTUAL</text>
+    letter-spacing="1.5">OLD MUTUAL</text>
 
-  <!-- INSURE text -->
-  <text x="82" y="57"
+  <!-- INSURE text in green -->
+  <text x="83" y="54"
     font-family="Arial,Helvetica,sans-serif"
-    font-weight="800"
-    font-size="18"
+    font-weight="700"
+    font-size="17"
     fill="#007037"
-    letter-spacing="4.6">INSURE</text>
+    letter-spacing="5">INSURE</text>
 </svg>

@@ -3,11 +3,10 @@
   <text x="0" y="50"
     font-family="'Helvetica Neue',Arial,Helvetica,sans-serif"
     font-weight="300"
-    font-size="46"
-    fill="#ce202f">momentum</text>
+    font-size="46"><tspan fill="#CE202F">m</tspan><tspan fill="#1A3060">omentum</tspan></text>
   <text x="3" y="78"
     font-family="'Helvetica Neue',Arial,Helvetica,sans-serif"
     font-weight="300"
     font-size="26"
-    fill="#595959">group</text>
+    fill="#6D6E71">group</text>
 </svg>

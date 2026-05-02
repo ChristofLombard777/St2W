@@ -21,7 +21,8 @@ export default function St2WFinalCTA() {
           <SectionHeading
             title={finalCTA.heading}
             align="center"
-            className="text-brand-white mb-10 z-10"
+            headingClass="!text-white"
+            className="mb-10 z-10"
           />
 
           <ul className="mb-8 md:mb-12 space-y-3 md:space-y-4 max-w-2xl w-full z-10">

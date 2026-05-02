@@ -3,59 +3,40 @@
 import Container from "@/components/ui/Container";
 import { st2wContent } from "@/lib/content";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, Users, Sparkles, Quote } from "lucide-react";
 
 export default function St2WValueShift() {
   const revealRef = useRevealOnScroll();
+  const quote = st2wContent.quotes[0];
 
   return (
-    <section
-      className="relative overflow-hidden bg-white py-16 md:py-24"
-      ref={revealRef}
-    >
-      {/* Soft radial glow behind text */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-brand-gold-500/6 blur-[100px]" />
-      </div>
-
+    <section className="relative overflow-hidden py-16 md:py-24 bg-white" ref={revealRef}>
       <Container className="relative z-10">
-        <div data-reveal className="mx-auto max-w-3xl text-center">
-          {/* Gold accent line */}
-          <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-gold-500/20 to-brand-gold-600/10 shadow-[0_0_24px_rgba(212,175,90,0.18)]">
-            <ShieldCheck className="h-6 w-6 text-brand-gold-600" />
+        <div data-reveal className="mx-auto max-w-5xl">
+          <div className="grid gap-6 md:grid-cols-2 md:gap-8 items-stretch">
+            <div className="rounded-2xl border border-brand-navy-900/8 bg-gradient-to-br from-white to-[#f6f8fc] p-7 md:p-9 shadow-[0_8px_32px_rgba(15,44,88,0.08)]">
+              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-navy-950 shadow-lg shadow-brand-navy-950/20">
+                <Sparkles className="h-5 w-5 text-brand-gold-400" />
+              </div>
+              <h3 className="mb-3 font-display text-xl font-extrabold tracking-[-0.03em] text-brand-navy-950 md:text-2xl">{st2wContent.valueShift.heading}</h3>
+              <p className="text-base leading-relaxed text-brand-navy-800/85">{st2wContent.valueShift.body}</p>
+              <div className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-brand-gold-600">
+                <span>Discover how it works</span><ArrowRight className="h-4 w-4" />
+              </div>
+            </div>
+            <div className="rounded-2xl border border-brand-navy-900/8 bg-gradient-to-br from-white to-[#f6f8fc] p-7 md:p-9 shadow-[0_8px_32px_rgba(15,44,88,0.08)]">
+              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-brand-navy-950 shadow-lg shadow-brand-navy-950/20">
+                <Users className="h-5 w-5 text-brand-gold-400" />
+              </div>
+              <h3 className="mb-3 font-display text-xl font-extrabold tracking-[-0.03em] text-brand-navy-950 md:text-2xl">{st2wContent.whoIsItFor.heading}</h3>
+              <p className="text-base leading-relaxed text-brand-navy-800/85 mb-3">{st2wContent.whoIsItFor.body}</p>
+              <p className="text-sm font-semibold leading-relaxed text-brand-navy-950">{st2wContent.whoIsItFor.closing}</p>
+            </div>
           </div>
-
-          <h2 className="mb-5 font-display text-2xl font-extrabold tracking-[-0.04em] text-brand-navy-950 md:text-3xl lg:text-4xl leading-[1.08]">
-            {st2wContent.valueShift.heading}
-          </h2>
-
-          <p className="mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-brand-navy-900/80">
-            {st2wContent.valueShift.body}
-          </p>
-
-          <div className="mt-8 flex items-center justify-center gap-2 text-sm font-semibold text-brand-gold-600">
-            <span>Discover how it works</span>
-            <ArrowRight className="h-4 w-4" />
-          </div>
-        </div>
-
-        {/* Who is St2W for */}
-        <div data-reveal className="mt-16 md:mt-24 mx-auto max-w-3xl">
-          <div
-            className="rounded-3xl p-6 sm:p-8 md:p-10"
-            style={{
-              background: "#e8edf8",
-              boxShadow: "12px 12px 28px rgba(163,177,198,0.7), -12px -12px 28px rgba(255,255,255,0.95)"
-            }}
-          >
-            <h3 className="mb-4 font-display text-xl font-extrabold tracking-[-0.03em] text-brand-navy-950 md:text-2xl">
-              {st2wContent.whoIsItFor.heading}
-            </h3>
-            <p className="text-base leading-relaxed text-brand-navy-800/85 mb-4">
-              {st2wContent.whoIsItFor.body}
-            </p>
-            <p className="text-base font-semibold leading-relaxed text-brand-navy-950">
-              {st2wContent.whoIsItFor.closing}
+          <div data-reveal className="mt-8 text-center">
+            <p className="inline-flex items-center gap-2 text-sm italic text-brand-navy-600/60">
+              <Quote className="h-3.5 w-3.5" />
+              {quote.text} <span className="not-italic font-medium text-brand-navy-600/40">— {quote.author}</span>
             </p>
           </div>
         </div>

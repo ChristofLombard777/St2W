@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { st2wContent } from "@/lib/content";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
-import { Sparkles, Star, TrendingUp } from "lucide-react";
+import { Sparkles, Star, TrendingUp, Quote } from "lucide-react";
 
 const PLAN_GRADIENTS = [
   "linear-gradient(135deg,#6ee7f7,#38bdf8)",
@@ -18,6 +18,7 @@ const PLAN_GRADIENTS = [
 export default function St2WEarnings() {
   const revealRef = useRevealOnScroll();
   const { earnings } = st2wContent;
+  const quote2 = st2wContent.quotes[1];
 
   return (
     <section
@@ -214,6 +215,14 @@ export default function St2WEarnings() {
             ))}
           </div>
 
+          {/* Quote 2 — subtle accent */}
+          <div data-reveal className="mt-10 text-center">
+            <p className="inline-flex items-center gap-2 text-sm italic text-brand-navy-600/50">
+              <Quote className="h-3.5 w-3.5" />
+              {quote2.text}
+              <span className="not-italic font-medium text-brand-navy-600/35">— {quote2.author}</span>
+            </p>
+          </div>
         </div>
       </Container>
     </section>

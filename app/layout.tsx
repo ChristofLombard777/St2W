@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Bricolage_Grotesque } from "next/font/google";
+import { Geist, Plus_Jakarta_Sans } from "next/font/google";
 import "./../styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -10,7 +10,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const bricolageGrotesque = Bricolage_Grotesque({
+const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${bricolageGrotesque.variable} font-sans min-h-screen flex flex-col`} suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${plusJakartaSans.variable} font-sans min-h-screen flex flex-col`} suppressHydrationWarning>
         <Header />
         <UnlimitedConfetti />
         <main className="flex-1">
