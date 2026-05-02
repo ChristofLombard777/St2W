@@ -156,7 +156,12 @@ export const st2wContent = {
   },
   valueShift: {
     heading: "Turn necessity into opportunity",
-    body: "Your insurance does not have to remain a grudge purchase. With St2W, the products you already need can become part of a shared-value system that helps you earn extra income and create wealth."
+    body: "St2W helps you transform necessary monthly expenses, like insurance, from grudge purchases into income-generating opportunities, while staying fully covered."
+  },
+  whoIsItFor: {
+    heading: "Who is St2W for?",
+    body: "St2W is designed for everyday South Africans who want to create an additional stream of income. You do not have to be an existing insurance holder to start. Whether you already have qualifying insurance products, want to review your current cover, or are currently uninsured and looking for a way to build towards better financial protection, St2W offers different pathways for different people.",
+    closing: "The goal is simple: help people turn everyday financial needs into income opportunities, while creating a pathway towards long-term wealth."
   },
   story: {
     heading: "The dream outcome",
