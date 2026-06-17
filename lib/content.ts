@@ -262,6 +262,40 @@ export const st2wContent = {
     noMonthly: "Affiliation is free — no monthly fees are levied or collected",
     note: "Pay outs can be delayed up to three months due to policy activations and underwriting requirements on new business. Upgrades and buy-ups are constantly available."
   },
+  faq: [
+    {
+      q: "Is St2W an MLM or pyramid scheme?",
+      a: "No. St2W is not an MLM or pyramid scheme. There is no downline structure, no mandatory recruitment targets, and no monthly fees. You simply refer people to Worldwide Wealth — a licensed financial services provider — and earn a bonus when qualifying insurance or financial products are placed. It is a referral rewards programme backed by real, regulated financial products."
+    },
+    {
+      q: "Do I need to already have insurance to join?",
+      a: "No. You do not need existing insurance to participate. Whether you already hold qualifying products, want to review your current cover, or are starting from scratch, there is a pathway for you. St2W is open to all qualifying South Africans."
+    },
+    {
+      q: "Do I need to sell anything?",
+      a: "Absolutely not. There is no selling involved. You simply introduce family, friends, colleagues, and others to Worldwide Wealth. The licensed advisers at Worldwide Wealth handle all advice, compliance, and product placement. Your role is only to refer."
+    },
+    {
+      q: "How quickly can I start earning?",
+      a: "Payouts activate once at least 2 qualifying introductions have been successfully placed. Due to policy activations and underwriting requirements on new business, payouts can be delayed by up to three months. Once active, earnings are paid monthly on accruals of R500 or more directly into your bank account."
+    },
+    {
+      q: "How much can I realistically earn?",
+      a: "Earnings depend on your chosen plan and how many people you introduce. Standard plans range from R2,500 up to R20,000 per month. Premier Plus is capped at R35,000 per month. The Unlimited plan — limited to only 120 clients in South Africa — has no monthly income cap. All figures are maximums and depend on qualifying business being placed."
+    },
+    {
+      q: "What is the once-off setup fee for?",
+      a: "The setup fee covers your enrolment and administration into the St2W system. Fees range from R500 to R1,000 for standard plans, with optional buy-ups available. The Unlimited plan has a once-off buy-in of R26,000. There are no monthly fees charged — ever. Affiliation is free after the initial setup."
+    },
+    {
+      q: "Is Worldwide Wealth a regulated financial services provider?",
+      a: "Yes. Worldwide Wealth is a licensed financial services provider authorised by the Financial Sector Conduct Authority (FSCA). All products recommended and placed are fully compliant with South African financial services legislation."
+    },
+    {
+      q: "How much time does this require?",
+      a: "St2W is designed to be 100% part-time and can be worked around your existing job, business, or lifestyle. There are no minimum hours, no targets, and no pressure. The more introductions you make, the more your passive earnings grow — but the pace is entirely up to you."
+    }
+  ],
   finalCTA: {
     heading: "Finally",
     bullets: [

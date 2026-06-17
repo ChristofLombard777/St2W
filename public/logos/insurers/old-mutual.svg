@@ -1,24 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 72" role="img" aria-label="Old Mutual Insure">
   <title>Old Mutual Insure</title>
 
-  <!-- Green circle background -->
-  <circle cx="36" cy="36" r="34" fill="#007037"/>
+  <!-- Green circle background (Old Mutual primary green #009677) -->
+  <circle cx="36" cy="36" r="34" fill="#009677"/>
 
-  <!-- Stylised botanical / people mark in white -->
-  <!-- Centre vertical stem -->
-  <rect x="34.5" y="10" width="3" height="40" rx="1.5" fill="white"/>
-  <!-- Horizontal crossbar -->
-  <rect x="22" y="25" width="28" height="3" rx="1.5" fill="white"/>
-  <!-- Left arc leaf -->
-  <path d="M35,22 Q14,28 18,50 Q24,38 35,35 Z" fill="white"/>
-  <!-- Right arc leaf -->
-  <path d="M37,22 Q58,28 54,50 Q48,38 37,35 Z" fill="white"/>
-  <!-- Left lower leaf -->
-  <path d="M35,35 Q18,42 22,58 Q28,46 35,44 Z" fill="white"/>
-  <!-- Right lower leaf -->
-  <path d="M37,35 Q54,42 50,58 Q44,46 37,44 Z" fill="white"/>
+  <!--
+    The Old Mutual "Om" corporate mark — 4-fold symmetric:
+    a cross whose arms are near-full-diameter, with four diagonal
+    leaf/petal shapes filling each inter-arm quadrant.
+    All elements centred on (36, 36) — the circle centre.
+  -->
 
-  <!-- OLD MUTUAL text -->
+  <!-- Vertical arm (x-centred at 36, top to bottom within circle) -->
+  <rect x="34.5" y="5"  width="3" height="62" rx="1.5" fill="white"/>
+  <!-- Horizontal arm (y-centred at 36, left to right within circle) -->
+  <rect x="5"  y="34.5" width="62" height="3"  rx="1.5" fill="white"/>
+
+  <!--
+    Diagonal leaf shapes — each leaf fills one quadrant and connects
+    a point on the vertical arm to a point on the horizontal arm,
+    sweeping outward toward the diagonal corner of the circle.
+
+    Connection points are at r ≈ 12 from centre along each arm:
+      top  : (36, 24)    bottom : (36, 48)
+      left : (24, 36)    right  : (48, 36)
+    Outer diagonal corners sit near the circle edge: (12,12), (60,12), (12,60), (60,60)
+  -->
+
+  <!-- NW leaf: upper arm → left arm, through corner (12,12) -->
+  <path d="M34.5,24 C29,20 20,15 12,12 C15,20 20,29 24,34.5 C28,32 31,29 34.5,24Z" fill="white"/>
+
+  <!-- NE leaf: upper arm → right arm, through corner (60,12) -->
+  <path d="M37.5,24 C43,20 52,15 60,12 C57,20 52,29 48,34.5 C44,32 41,29 37.5,24Z" fill="white"/>
+
+  <!-- SW leaf: lower arm → left arm, through corner (12,60) -->
+  <path d="M34.5,48 C29,52 20,57 12,60 C15,52 20,43 24,37.5 C28,40 31,43 34.5,48Z" fill="white"/>
+
+  <!-- SE leaf: lower arm → right arm, through corner (60,60) -->
+  <path d="M37.5,48 C43,52 52,57 60,60 C57,52 52,43 48,37.5 C44,40 41,43 37.5,48Z" fill="white"/>
+
+  <!-- "OLD MUTUAL" — heavy black caps, tracked -->
   <text x="82" y="28"
     font-family="Arial,Helvetica,sans-serif"
     font-weight="800"
@@ -26,11 +47,11 @@
     fill="#1a1a1a"
     letter-spacing="1.5">OLD MUTUAL</text>
 
-  <!-- INSURE text in green -->
+  <!-- "INSURE" — bold green caps, wide tracking -->
   <text x="83" y="54"
     font-family="Arial,Helvetica,sans-serif"
     font-weight="700"
     font-size="17"
-    fill="#007037"
+    fill="#009677"
     letter-spacing="5">INSURE</text>
 </svg>

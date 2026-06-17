@@ -6,6 +6,7 @@ import St2WChallenges from "@/components/sections/st2w/St2WChallenges";
 import St2WHowItWorks from "@/components/sections/st2w/St2WHowItWorks";
 import St2WEarnings from "@/components/sections/st2w/St2WEarnings";
 import St2WFees from "@/components/sections/st2w/St2WFees";
+import St2WFAQ from "@/components/sections/st2w/St2WFAQ";
 import St2WFinalCTA from "@/components/sections/st2w/St2WFinalCTA";
 import WhatsAppFloat from "@/components/sections/st2w/WhatsAppFloat";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <St2WHowItWorks />
         <St2WEarnings />
         <St2WFees />
+        <St2WFAQ />
         <St2WFinalCTA />
       </div>
       <WhatsAppFloat />

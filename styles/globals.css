@@ -280,6 +280,21 @@ body {
   }
 }
 
+@keyframes mesh-drift {
+  0% {
+    transform: translate(-10%, -10%) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(5%, 5%) rotate(2deg) scale(1.05);
+  }
+  66% {
+    transform: translate(-5%, 8%) rotate(-1deg) scale(0.97);
+  }
+  100% {
+    transform: translate(8%, -5%) rotate(3deg) scale(1.03);
+  }
+}
+
 .partner-carousel {
   --blur: 6px;
   --contrast: 105%;

@@ -19,7 +19,47 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "St2W | Short-Term to Wealth",
-  description: "St2W — an easy pathway to accelerate financial increase and wealth generation. Powered by Worldwide Wealth, FSP 15680.",
+  description: "St2W — an easy pathway to accelerate financial increase and wealth generation. Turn your monthly insurance expenses into passive income. Powered by Worldwide Wealth, FSP 15680.",
+  metadataBase: new URL("https://www.st2w.co.za"),
+  alternates: {
+    canonical: "https://www.st2w.co.za",
+  },
+  openGraph: {
+    title: "St2W | Short-Term to Wealth",
+    description: "Turn your monthly insurance expenses into passive income. An easy pathway to financial increase and wealth generation for everyday South Africans.",
+    url: "https://www.st2w.co.za",
+    siteName: "St2W",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "St2W – Short-Term to Wealth",
+      },
+    ],
+    locale: "en_ZA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "St2W | Short-Term to Wealth",
+    description: "Turn your monthly insurance expenses into passive income. Easy pathway to wealth for everyday South Africans.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+    shortcut: "/icon.png",
+  },
+  keywords: [
+    "St2W", "Short-Term to Wealth", "passive income South Africa",
+    "insurance referral income", "Worldwide Wealth", "FSP 15680",
+    "extra income South Africa", "wealth generation", "financial freedom SA"
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
