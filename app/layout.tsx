@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "St2W",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "St2W – Short-Term to Wealth",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
-    shortcut: "/icon.png",
+    icon: "/icon.jpg",
+    apple: "/apple-icon.jpg",
+    shortcut: "/icon.jpg",
   },
   keywords: [
     "St2W", "Short-Term to Wealth", "passive income South Africa",
